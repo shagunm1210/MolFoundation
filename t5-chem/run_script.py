@@ -16,3 +16,4 @@ X_train, X_test = sklearn.model_selection.train_test_split(data["SMILES"], test_
 Y_train, Y_test = sklearn.model_selection.train_test_split(data["zpve"], test_size=0.2, random_state=42)
 
 # tokenize data
+# testing
