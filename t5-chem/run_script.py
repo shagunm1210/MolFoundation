@@ -91,10 +91,11 @@ def train_one_epoch(epoch_index):
         running_loss += nn_loss.item()
         if num_of_examples % 100 == 0:
             last_loss = running_loss / 100 # loss per X examples
-            print('num_of_examples {} loss: {} %_data_trained : {}'.format(num_of_examples + 1, last_loss, num_of_examples / len(X_train) * 100))
+            print('num_of_examples {} loss: {} %_data_trained : {}'.format(num_of_examples, last_loss, num_of_examples / len(X_train) * 100))
             wandb.log({"num_of_examples": num_of_examples, "train_loss": last_loss})
             running_loss = 0.
         num_of_examples += len(batch["input_ids"])
+        # break
             
 
 def inference_test_set(epoch_index):
@@ -112,12 +113,12 @@ def inference_test_set(epoch_index):
 
         with torch.no_grad():
             outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-            loss = outputs["loss"]
-            logits = outputs["logits"]
+            # loss = outputs["loss"]
+            # logits = outputs["logits"]
             encoder = outputs["encoder_last_hidden_state"]
 
             # inference regression head on top of encoder output to label
-            # average over second dimension of encoder output to get a single vector for each example
+            # average over second dimension of encoder output to get a single vector for each example (batch_size, seq_len, hidden_size)
             encoder = encoder.mean(dim=1)
 
             # pass encoder output to regression head
@@ -126,28 +127,30 @@ def inference_test_set(epoch_index):
             # add to dictionary
             outputs_dict["ground_truth"].extend(y_regression_values.cpu().numpy())
             outputs_dict["predictions"].extend(nn_outputs.flatten().cpu().detach().numpy())
-            total_loss += nn_loss.item()
-            nn_loss.backward()
-            optimizer.step()
+            total_tloss += nn_loss.item()
             running_tloss += nn_loss.item()
-            if num_of_examples % 100 == 0:
-                last_tloss = running_tloss / 100 # loss per X examples
-                print('  num_of_examples {} test_loss: {}'.format(num_of_examples + 1, last_tloss))
-                wandb.log({"num_of_test_examples": num_of_examples, "test_loss": last_tloss})
-                running_tloss = 0.
-                # Track best performance, and save the model's state
-                if last_tloss < best_vloss:
-                    best_vloss = last_tloss
-                    model_path = 'model_{}_{}'.format(timestamp, num_of_examples)
-                    torch.save(nnmodel.state_dict(), model_path)
+            # if num_of_examples % 100 == 0:
+            #     last_tloss = running_tloss / 100 # loss per X examples
+            #     print('  num_of_examples {} test_loss: {}'.format(num_of_examples + 1, last_tloss))
+            wandb.log({"num_of_test_examples": num_of_examples, "test_loss": total_tloss})
+                # running_tloss = 0.
+                # # Track best performance, and save the model's state
+                # if last_tloss < best_vloss:
+                #     best_vloss = last_tloss
+                #     model_path = 'model_{}_{}'.format(timestamp, num_of_examples)
+                #     torch.save(nnmodel.state_dict(), model_path)
         num_of_examples += len(batch["input_ids"])
+        # break
+
     return outputs_dict
 
 def generate_parity_plot(ground_truth, predictions):
+    ground_truth = np.array(ground_truth)
     plt.scatter(ground_truth, predictions)
     # draw line of best fit
     m, b = np.polyfit(ground_truth, predictions, 1)
-    plt.plot(ground_truth, m*ground_truth + b)
+    line_of_best_fit = m*ground_truth + b
+    plt.plot(ground_truth, m*ground_truth + b, color="orange")
     # add labels of correlation coefficient
     # correlation coefficient
     r = np.corrcoef(ground_truth, predictions)[0, 1]

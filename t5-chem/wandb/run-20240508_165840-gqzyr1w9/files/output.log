@@ -1,0 +1,37 @@
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Epoch 0
+num_of_examples 1 loss: 0.00029259972274303436 %_data_trained : 0.0
+> /home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py(151)generate_parity_plot()
+-> line_of_best_fit = m*ground_truth + b
+/home/stanlo229/Research/Repos/MolFoundation/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+[0.158335, 0.13726, 0.146735, 0.161529, 0.160439, 0.192398, 0.064725, 0.183319, 0.097863, 0.138017, 0.132375, 0.124166, 0.20374, 0.145227, 0.158552, 0.104675]
+*** NameError: name 'line_of_best_fit' is not defined
+0.04118084091853874
+*** TypeError: can't multiply sequence by non-int of type 'numpy.float64'
+<class 'list'>
+<class 'numpy.float64'>
+[0.00652037 0.00565248 0.00604267 0.0066519  0.00660701 0.00792311
+ 0.00266543 0.00754923 0.00403008 0.00568366 0.00545131 0.00511326
+ 0.00839018 0.00598057 0.00652931 0.0043106 ]
+[-0.01615952 -0.01702741 -0.01663722 -0.01602799 -0.01607288 -0.01475678
+ -0.02001446 -0.01513066 -0.01864981 -0.01699623 -0.01722858 -0.01756663
+ -0.01428971 -0.01669932 -0.01615058 -0.01836929]
+--KeyboardInterrupt--
+--KeyboardInterrupt--
+Traceback (most recent call last):
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 174, in <module>
+    # Generate Parity Plot
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 151, in generate_parity_plot
+    pdb.set_trace()
+  File "/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit

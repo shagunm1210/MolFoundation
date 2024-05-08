@@ -1,0 +1,35 @@
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Epoch 0
+num_of_examples 1 loss: 0.00014657904393970965 %_data_trained : 0.0
+/home/stanlo229/Research/Repos/MolFoundation/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+num_of_examples 401 loss: 0.0027280748914927243 %_data_trained : 5.0
+num_of_examples 801 loss: 0.0018537507858127356 %_data_trained : 10.0
+num_of_examples 1201 loss: 0.001292212661355734 %_data_trained : 15.0
+num_of_examples 1601 loss: 0.0009875851077958942 %_data_trained : 20.0
+num_of_examples 2001 loss: 0.0008110130194108933 %_data_trained : 25.0
+num_of_examples 2401 loss: 0.0005726801790297032 %_data_trained : 30.0
+num_of_examples 2801 loss: 0.000548577185254544 %_data_trained : 35.0
+num_of_examples 3201 loss: 0.0004282872274052352 %_data_trained : 40.0
+num_of_examples 3601 loss: 0.0003855931671569124 %_data_trained : 45.0
+num_of_examples 4001 loss: 0.00032694901281502095 %_data_trained : 50.0
+num_of_examples 4401 loss: 0.00030238739360356705 %_data_trained : 55.00000000000001
+num_of_examples 4801 loss: 0.0002571687617455609 %_data_trained : 60.0
+num_of_examples 5201 loss: 0.00019532399368472398 %_data_trained : 65.0
+num_of_examples 5601 loss: 0.00017174513195641338 %_data_trained : 70.0
+num_of_examples 6001 loss: 0.00016682581102941184 %_data_trained : 75.0
+num_of_examples 6401 loss: 0.00017503950977697968 %_data_trained : 80.0
+num_of_examples 6801 loss: 0.0001375261478824541 %_data_trained : 85.0
+num_of_examples 7201 loss: 0.00013035355441388675 %_data_trained : 90.0
+num_of_examples 7601 loss: 0.0001601345627568662 %_data_trained : 95.0
+Traceback (most recent call last):
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 170, in <module>
+    generate_parity_plot(outputs_dict["ground_truth"], outputs_dict["predictions"])
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 148, in generate_parity_plot
+    plt.plot(ground_truth, m*ground_truth + b)
+                           ~^~~~~~~~~~~~~
+TypeError: can't multiply sequence by non-int of type 'numpy.float64'

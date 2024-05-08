@@ -1,0 +1,197 @@
+2024-05-08 17:03:32,879 INFO    StreamThr :78343 [internal.py:wandb_internal():85] W&B internal server running at pid: 78343, started at: 2024-05-08 17:03:32.879133
+2024-05-08 17:03:32,880 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: status
+2024-05-08 17:03:32,882 INFO    WriterThread:78343 [datastore.py:open_for_write():87] open: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/run-lpsr74ik.wandb
+2024-05-08 17:03:32,882 DEBUG   SenderThread:78343 [sender.py:send():378] send: header
+2024-05-08 17:03:32,882 DEBUG   SenderThread:78343 [sender.py:send():378] send: run
+2024-05-08 17:03:33,217 INFO    SenderThread:78343 [dir_watcher.py:__init__():211] watching files in: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files
+2024-05-08 17:03:33,217 INFO    SenderThread:78343 [sender.py:_start_run_threads():1123] run started: lpsr74ik with start time 1715202212.879134
+2024-05-08 17:03:33,220 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: check_version
+2024-05-08 17:03:33,221 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: check_version
+2024-05-08 17:03:33,392 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: run_start
+2024-05-08 17:03:33,402 DEBUG   HandlerThread:78343 [system_info.py:__init__():26] System info init
+2024-05-08 17:03:33,402 DEBUG   HandlerThread:78343 [system_info.py:__init__():41] System info init done
+2024-05-08 17:03:33,403 INFO    HandlerThread:78343 [system_monitor.py:start():194] Starting system monitor
+2024-05-08 17:03:33,403 INFO    SystemMonitor:78343 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-08 17:03:33,403 INFO    HandlerThread:78343 [system_monitor.py:probe():214] Collecting system info
+2024-05-08 17:03:33,403 INFO    SystemMonitor:78343 [interfaces.py:start():188] Started cpu monitoring
+2024-05-08 17:03:33,404 INFO    SystemMonitor:78343 [interfaces.py:start():188] Started disk monitoring
+2024-05-08 17:03:33,405 INFO    SystemMonitor:78343 [interfaces.py:start():188] Started gpu monitoring
+2024-05-08 17:03:33,405 INFO    SystemMonitor:78343 [interfaces.py:start():188] Started memory monitoring
+2024-05-08 17:03:33,406 INFO    SystemMonitor:78343 [interfaces.py:start():188] Started network monitoring
+2024-05-08 17:03:33,411 DEBUG   HandlerThread:78343 [system_info.py:probe():150] Probing system
+2024-05-08 17:03:33,412 DEBUG   HandlerThread:78343 [system_info.py:_probe_git():135] Probing git
+2024-05-08 17:03:33,415 DEBUG   HandlerThread:78343 [system_info.py:_probe_git():143] Probing git done
+2024-05-08 17:03:33,415 DEBUG   HandlerThread:78343 [system_info.py:probe():198] Probing system done
+2024-05-08 17:03:33,415 DEBUG   HandlerThread:78343 [system_monitor.py:probe():223] {'os': 'Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.12.3', 'heartbeatAt': '2024-05-08T21:03:33.411890', 'startedAt': '2024-05-08T21:03:32.876397', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py', 'codePathLocal': 'run_script.py', 'codePath': 't5-chem/run_script.py', 'git': {'remote': 'https://github.com/shagunm1210/MolFoundation.git', 'commit': 'f2a852c8077ce059fefdd7a40fbfff5a804d0d2f'}, 'email': 'stanley.lo@mail.utoronto.ca', 'root': '/home/stanlo229/Research/Repos/MolFoundation', 'host': 'DESKTOP-HET59N2', 'username': 'stanlo229', 'executable': '/home/stanlo229/anaconda3/envs/MolFoundation/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3700.036999999999, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}, {'current': 3700.037, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 1006.853931427002, 'used': 26.00137710571289}}, 'gpu': 'NVIDIA GeForce RTX 3070 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070 Ti', 'memory_total': 8589934592}], 'memory': {'total': 15.579334259033203}}
+2024-05-08 17:03:33,415 INFO    HandlerThread:78343 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-08 17:03:33,415 INFO    HandlerThread:78343 [system_monitor.py:probe():227] Publishing system info
+2024-05-08 17:03:33,415 DEBUG   HandlerThread:78343 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-08 17:03:34,217 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_created():271] file/dir created: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/conda-environment.yaml
+2024-05-08 17:03:36,217 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/conda-environment.yaml
+2024-05-08 17:03:36,335 DEBUG   HandlerThread:78343 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-08 17:03:36,336 INFO    HandlerThread:78343 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-08 17:03:36,338 DEBUG   SenderThread:78343 [sender.py:send():378] send: files
+2024-05-08 17:03:36,338 INFO    SenderThread:78343 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-08 17:03:36,379 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-08 17:03:36,379 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: python_packages
+2024-05-08 17:03:36,379 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-08 17:03:36,379 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: stop_status
+2024-05-08 17:03:36,601 DEBUG   SenderThread:78343 [sender.py:send():378] send: telemetry
+2024-05-08 17:03:36,786 INFO    wandb-upload_0:78343 [upload_job.py:push():130] Uploaded file /tmp/tmpctkgypu4wandb/5gkdd0qa-wandb-metadata.json
+2024-05-08 17:03:37,218 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_created():271] file/dir created: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/requirements.txt
+2024-05-08 17:03:37,219 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_created():271] file/dir created: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-metadata.json
+2024-05-08 17:03:37,219 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_created():271] file/dir created: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log
+2024-05-08 17:03:38,183 DEBUG   SenderThread:78343 [sender.py:send():378] send: telemetry
+2024-05-08 17:03:38,183 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 17:03:39,219 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log
+2024-05-08 17:03:39,362 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: partial_history
+2024-05-08 17:03:39,362 DEBUG   SenderThread:78343 [sender.py:send():378] send: history
+2024-05-08 17:03:39,362 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: summary_record
+2024-05-08 17:03:39,363 INFO    SenderThread:78343 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 17:03:39,901 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: partial_history
+2024-05-08 17:03:39,902 DEBUG   SenderThread:78343 [sender.py:send():378] send: history
+2024-05-08 17:03:39,902 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: summary_record
+2024-05-08 17:03:39,902 INFO    SenderThread:78343 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 17:03:40,219 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_created():271] file/dir created: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-summary.json
+2024-05-08 17:03:41,220 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log
+2024-05-08 17:03:43,982 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 17:03:45,733 DEBUG   SenderThread:78343 [sender.py:send():378] send: exit
+2024-05-08 17:03:45,733 INFO    SenderThread:78343 [sender.py:send_exit():585] handling exit code: 1
+2024-05-08 17:03:45,733 INFO    SenderThread:78343 [sender.py:send_exit():587] handling runtime: 12
+2024-05-08 17:03:45,734 INFO    SenderThread:78343 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 17:03:45,734 INFO    SenderThread:78343 [sender.py:send_exit():593] send defer
+2024-05-08 17:03:45,734 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,734 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 0
+2024-05-08 17:03:45,734 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,734 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-05-08 17:03:45,734 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 1
+2024-05-08 17:03:45,734 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,735 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 1
+2024-05-08 17:03:45,735 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,735 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-05-08 17:03:45,735 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 2
+2024-05-08 17:03:45,735 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,735 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 2
+2024-05-08 17:03:45,735 INFO    HandlerThread:78343 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-08 17:03:45,735 DEBUG   SystemMonitor:78343 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-08 17:03:45,735 DEBUG   SystemMonitor:78343 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-08 17:03:45,735 DEBUG   SystemMonitor:78343 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-08 17:03:45,735 INFO    HandlerThread:78343 [interfaces.py:finish():200] Joined cpu monitor
+2024-05-08 17:03:45,735 INFO    HandlerThread:78343 [interfaces.py:finish():200] Joined disk monitor
+2024-05-08 17:03:45,746 INFO    HandlerThread:78343 [interfaces.py:finish():200] Joined gpu monitor
+2024-05-08 17:03:45,746 INFO    HandlerThread:78343 [interfaces.py:finish():200] Joined memory monitor
+2024-05-08 17:03:45,746 INFO    HandlerThread:78343 [interfaces.py:finish():200] Joined network monitor
+2024-05-08 17:03:45,746 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,746 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-05-08 17:03:45,746 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 3
+2024-05-08 17:03:45,747 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,747 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 3
+2024-05-08 17:03:45,747 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,747 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-05-08 17:03:45,747 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 4
+2024-05-08 17:03:45,747 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,747 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 4
+2024-05-08 17:03:45,747 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,747 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-05-08 17:03:45,747 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 5
+2024-05-08 17:03:45,747 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,747 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 5
+2024-05-08 17:03:45,748 DEBUG   SenderThread:78343 [sender.py:send():378] send: summary
+2024-05-08 17:03:45,748 INFO    SenderThread:78343 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 17:03:45,748 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,748 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-05-08 17:03:45,748 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 6
+2024-05-08 17:03:45,748 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,748 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 6
+2024-05-08 17:03:45,748 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,748 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-05-08 17:03:45,750 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 17:03:45,870 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 7
+2024-05-08 17:03:45,870 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:45,870 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 7
+2024-05-08 17:03:45,870 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:45,870 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-05-08 17:03:46,221 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-summary.json
+2024-05-08 17:03:46,221 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/config.yaml
+2024-05-08 17:03:46,650 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 8
+2024-05-08 17:03:46,650 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:46,651 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 8
+2024-05-08 17:03:46,651 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:46,651 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-05-08 17:03:46,651 INFO    SenderThread:78343 [job_builder.py:build():432] Attempting to build job artifact
+2024-05-08 17:03:46,651 INFO    SenderThread:78343 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-05-08 17:03:46,660 INFO    SenderThread:78343 [job_builder.py:build():541] adding wandb-job metadata file
+2024-05-08 17:03:46,662 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 9
+2024-05-08 17:03:46,662 DEBUG   SenderThread:78343 [sender.py:send():378] send: artifact
+2024-05-08 17:03:46,662 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:46,663 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 9
+2024-05-08 17:03:46,733 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 17:03:47,063 INFO    SenderThread:78343 [sender.py:send_artifact():1467] sent artifact job-https___github.com_shagunm1210_MolFoundation.git_t5-chem_run_script.py - {'id': 'QXJ0aWZhY3Q6ODI3OTc5MzQ3', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MjI2MjYzMw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODI3OTc5MzQ3', 'versionIndex': 8}}}
+2024-05-08 17:03:47,063 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:47,063 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-05-08 17:03:47,063 INFO    SenderThread:78343 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-08 17:03:47,221 INFO    Thread-12 :78343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log
+2024-05-08 17:03:47,222 INFO    SenderThread:78343 [dir_watcher.py:finish():388] scan: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files
+2024-05-08 17:03:47,222 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/config.yaml config.yaml
+2024-05-08 17:03:47,222 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/conda-environment.yaml conda-environment.yaml
+2024-05-08 17:03:47,222 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log output.log
+2024-05-08 17:03:47,224 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/requirements.txt requirements.txt
+2024-05-08 17:03:47,225 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-metadata.json wandb-metadata.json
+2024-05-08 17:03:47,227 INFO    SenderThread:78343 [dir_watcher.py:finish():402] scan save: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-summary.json wandb-summary.json
+2024-05-08 17:03:47,227 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 10
+2024-05-08 17:03:47,227 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 17:03:47,227 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:47,227 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 10
+2024-05-08 17:03:47,228 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:47,228 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-05-08 17:03:47,228 INFO    SenderThread:78343 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-08 17:03:47,478 INFO    wandb-upload_0:78343 [upload_job.py:push():130] Uploaded file /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/config.yaml
+2024-05-08 17:03:47,610 INFO    wandb-upload_1:78343 [upload_job.py:push():130] Uploaded file /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/conda-environment.yaml
+2024-05-08 17:03:47,678 INFO    wandb-upload_3:78343 [upload_job.py:push():130] Uploaded file /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/requirements.txt
+2024-05-08 17:03:47,733 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 17:03:47,734 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 17:03:47,752 INFO    wandb-upload_2:78343 [upload_job.py:push():130] Uploaded file /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/output.log
+2024-05-08 17:03:47,818 INFO    wandb-upload_4:78343 [upload_job.py:push():130] Uploaded file /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/files/wandb-summary.json
+2024-05-08 17:03:48,019 INFO    Thread-11 (_thread_body):78343 [sender.py:transition_state():613] send defer: 11
+2024-05-08 17:03:48,019 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:48,019 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 11
+2024-05-08 17:03:48,019 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:48,019 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-05-08 17:03:48,020 INFO    SenderThread:78343 [file_pusher.py:join():175] waiting for file pusher
+2024-05-08 17:03:48,020 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 12
+2024-05-08 17:03:48,020 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:48,020 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 12
+2024-05-08 17:03:48,020 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:48,020 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-05-08 17:03:48,020 INFO    SenderThread:78343 [file_stream.py:finish():601] file stream finish called
+2024-05-08 17:03:48,092 INFO    SenderThread:78343 [file_stream.py:finish():605] file stream finish is done
+2024-05-08 17:03:48,092 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 13
+2024-05-08 17:03:48,092 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:48,092 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 13
+2024-05-08 17:03:48,093 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:48,093 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-05-08 17:03:48,093 INFO    SenderThread:78343 [sender.py:transition_state():613] send defer: 14
+2024-05-08 17:03:48,093 DEBUG   SenderThread:78343 [sender.py:send():378] send: final
+2024-05-08 17:03:48,093 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 17:03:48,093 DEBUG   SenderThread:78343 [sender.py:send():378] send: footer
+2024-05-08 17:03:48,093 INFO    HandlerThread:78343 [handler.py:handle_request_defer():184] handle defer: 14
+2024-05-08 17:03:48,093 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: defer
+2024-05-08 17:03:48,093 INFO    SenderThread:78343 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-05-08 17:03:48,093 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 17:03:48,094 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 17:03:48,094 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 17:03:48,094 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 17:03:48,094 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: server_info
+2024-05-08 17:03:48,095 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: get_summary
+2024-05-08 17:03:48,095 DEBUG   SenderThread:78343 [sender.py:send_request():405] send_request: server_info
+2024-05-08 17:03:48,095 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: sampled_history
+2024-05-08 17:03:48,096 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: internal_messages
+2024-05-08 17:03:48,162 INFO    MainThread:78343 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-05-08 17:03:48,162 INFO    MainThread:78343 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-05-08 17:03:48,162 INFO    MainThread:78343 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-05-08 17:03:48,162 DEBUG   HandlerThread:78343 [handler.py:handle_request():158] handle_request: shutdown
+2024-05-08 17:03:48,162 INFO    HandlerThread:78343 [handler.py:finish():882] shutting down handler
+2024-05-08 17:03:49,095 INFO    WriterThread:78343 [datastore.py:close():296] close: /home/stanlo229/Research/Repos/MolFoundation/t5-chem/wandb/run-20240508_170332-lpsr74ik/run-lpsr74ik.wandb
+2024-05-08 17:03:49,162 INFO    SenderThread:78343 [sender.py:finish():1545] shutting down sender
+2024-05-08 17:03:49,162 INFO    SenderThread:78343 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-08 17:03:49,162 INFO    SenderThread:78343 [file_pusher.py:join():175] waiting for file pusher

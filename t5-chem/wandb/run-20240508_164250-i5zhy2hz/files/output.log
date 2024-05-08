@@ -1,0 +1,42 @@
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Epoch 0
+num_of_examples 1 loss: 0.00013828995637595653 %_data_trained : 0.0
+/home/stanlo229/Research/Repos/MolFoundation/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+num_of_examples 401 loss: 0.0033670484088361265 %_data_trained : 5.0
+num_of_examples 801 loss: 0.0024308367120102047 %_data_trained : 10.0
+num_of_examples 1201 loss: 0.001736925053410232 %_data_trained : 15.0
+num_of_examples 1601 loss: 0.0010989600932225585 %_data_trained : 20.0
+num_of_examples 2001 loss: 0.0007510631869081408 %_data_trained : 25.0
+num_of_examples 2401 loss: 0.0006855694705154747 %_data_trained : 30.0
+num_of_examples 2801 loss: 0.0006170723680406809 %_data_trained : 35.0
+num_of_examples 3201 loss: 0.0005140672926791012 %_data_trained : 40.0
+num_of_examples 3601 loss: 0.00040008405048865827 %_data_trained : 45.0
+num_of_examples 4001 loss: 0.00029246812948258594 %_data_trained : 50.0
+num_of_examples 4401 loss: 0.0002717502129962668 %_data_trained : 55.00000000000001
+num_of_examples 4801 loss: 0.00026279020617948846 %_data_trained : 60.0
+num_of_examples 5201 loss: 0.00020192607858916746 %_data_trained : 65.0
+num_of_examples 5601 loss: 0.00020964506533346138 %_data_trained : 70.0
+num_of_examples 6001 loss: 0.0001644892303738743 %_data_trained : 75.0
+num_of_examples 6401 loss: 0.0001532775626401417 %_data_trained : 80.0
+num_of_examples 6801 loss: 0.00015067967702634633 %_data_trained : 85.0
+num_of_examples 7201 loss: 0.00014532927321852184 %_data_trained : 90.0
+num_of_examples 7601 loss: 0.00015547508432064205 %_data_trained : 95.0
+Traceback (most recent call last):
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 168, in <module>
+    outputs_dict = inference_test_set(epoch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 130, in inference_test_set
+    nn_loss.backward()
+  File "/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
