@@ -1,0 +1,60 @@
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at seyonec/ChemBERTa-zinc-base-v1 were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Epoch 0
+MaskedLMOutput(loss=tensor(9.3832, device='cuda:0'), logits=tensor([[[-2.1991, -1.2678, -2.2479,  ..., -1.2197, -2.1110, -3.0530],
+         [-2.0583, -1.3080, -1.4142,  ..., -0.6354, -2.6350, -3.1767],
+         [-2.4353, -2.4840, -2.8562,  ..., -1.0853, -1.8289, -2.0927],
+         ...,
+         [-2.2860, -1.8108, -2.9603,  ..., -1.3350, -2.3063, -3.9186],
+         [-2.2860, -1.8108, -2.9603,  ..., -1.3350, -2.3063, -3.9186],
+         [-2.2860, -1.8108, -2.9603,  ..., -1.3350, -2.3063, -3.9186]],
+        [[-2.1128, -1.9923, -1.7450,  ..., -1.1400, -2.2510, -2.5343],
+         [-1.9894, -1.9342, -1.9793,  ..., -0.5922, -3.0115, -3.0549],
+         [-1.9451, -2.5722, -2.4067,  ..., -1.3807, -2.1560, -1.4244],
+         ...,
+         [-2.1654, -2.1621, -3.1107,  ..., -1.3314, -2.5899, -3.8166],
+         [-2.1654, -2.1621, -3.1107,  ..., -1.3314, -2.5899, -3.8166],
+         [-2.1654, -2.1621, -3.1107,  ..., -1.3314, -2.5899, -3.8166]],
+        [[-1.8703, -1.4407, -3.3336,  ..., -0.7820, -1.2889, -3.2810],
+         [-1.9103, -1.1235, -1.2574,  ..., -0.4268, -2.7768, -4.0417],
+         [-3.0219, -2.5390, -3.4172,  ..., -1.2064, -1.4440, -1.7284],
+         ...,
+         [-2.0585, -2.2746, -3.1059,  ..., -1.2457, -2.4734, -4.1304],
+         [-2.0585, -2.2746, -3.1059,  ..., -1.2457, -2.4734, -4.1304],
+         [-2.0585, -2.2746, -3.1059,  ..., -1.2457, -2.4734, -4.1304]],
+        ...,
+        [[-2.4847, -2.1487, -2.5157,  ..., -0.9582, -2.2117, -2.3958],
+         [-2.1439, -1.8418, -1.7219,  ..., -0.4416, -2.7252, -2.9057],
+         [-1.7794, -1.6688, -1.8698,  ..., -1.4232, -1.5280, -2.0932],
+         ...,
+         [-2.3013, -1.9011, -3.1239,  ..., -1.1938, -2.4354, -3.6515],
+         [-2.3013, -1.9011, -3.1239,  ..., -1.1938, -2.4354, -3.6515],
+         [-2.3013, -1.9011, -3.1239,  ..., -1.1938, -2.4354, -3.6515]],
+        [[-2.3307, -1.8901, -2.7063,  ..., -1.1112, -2.2807, -3.2622],
+         [-1.8678, -1.5875, -2.2449,  ..., -0.7696, -2.7917, -3.4133],
+         [-1.5812, -2.4116, -3.2063,  ..., -1.3847, -2.4412, -3.1536],
+         ...,
+         [-2.3062, -1.9729, -3.1923,  ..., -1.2404, -2.4497, -3.7105],
+         [-2.3062, -1.9729, -3.1923,  ..., -1.2404, -2.4497, -3.7105],
+         [-2.3062, -1.9729, -3.1923,  ..., -1.2404, -2.4497, -3.7105]],
+        [[-2.8576, -2.0540, -2.6380,  ..., -1.3809, -1.6645, -3.5502],
+         [-2.0475, -1.9657, -2.1700,  ..., -1.1619, -2.9714, -3.6115],
+         [-1.9390, -1.9051, -2.4336,  ..., -2.3450, -2.6033, -3.7696],
+         ...,
+         [-2.5268, -2.0842, -3.0204,  ..., -1.3352, -2.2019, -3.9262],
+         [-2.5268, -2.0842, -3.0204,  ..., -1.3352, -2.2019, -3.9262],
+         [-2.5268, -2.0842, -3.0204,  ..., -1.3352, -2.2019, -3.9262]]],
+       device='cuda:0'), hidden_states=None, attentions=None)
+/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 173, in <module>
+    train_one_epoch(epoch)
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 80, in train_one_epoch
+    encoder = outputs["encoder_last_hidden_state"]
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/transformers/utils/generic.py", line 434, in __getitem__
+    return inner_dict[k]
+KeyError: 'encoder_last_hidden_state'

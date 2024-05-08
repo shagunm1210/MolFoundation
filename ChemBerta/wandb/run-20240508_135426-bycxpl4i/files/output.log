@@ -1,0 +1,102 @@
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at seyonec/ChemBERTa-zinc-base-v1 were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 173, in <module>
+    train_one_epoch(epoch)
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 80, in train_one_epoch
+    encoder = outputs["encoder_last_hidden_state"]
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/transformers/utils/generic.py", line 434, in __getitem__
+    return inner_dict[k]
+KeyError: 'encoder_last_hidden_state'
+roberta RobertaModel(
+  (embeddings): RobertaEmbeddings(
+    (word_embeddings): Embedding(767, 768, padding_idx=1)
+    (position_embeddings): Embedding(514, 768, padding_idx=1)
+    (token_type_embeddings): Embedding(1, 768)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (encoder): RobertaEncoder(
+    (layer): ModuleList(
+      (0-5): 6 x RobertaLayer(
+        (attention): RobertaAttention(
+          (self): RobertaSelfAttention(
+            (query): Linear(in_features=768, out_features=768, bias=True)
+            (key): Linear(in_features=768, out_features=768, bias=True)
+            (value): Linear(in_features=768, out_features=768, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): RobertaSelfOutput(
+            (dense): Linear(in_features=768, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): RobertaIntermediate(
+          (dense): Linear(in_features=768, out_features=3072, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): RobertaOutput(
+          (dense): Linear(in_features=3072, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+lm_head RobertaLMHead(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (decoder): Linear(in_features=768, out_features=767, bias=True)
+)
+Epoch 0
+MaskedLMOutput(loss=tensor(9.4408, device='cuda:0'), logits=tensor([[[-1.6496, -1.7702, -2.6045,  ..., -0.8230, -1.4954, -2.8339],
+         [-1.7489, -1.3760, -1.9128,  ..., -0.5965, -3.0471, -3.4378],
+         [-2.7831, -2.2965, -3.8073,  ..., -0.9518, -1.5477, -1.5211],
+         ...,
+         [-1.8464, -2.3008, -3.2725,  ..., -1.2311, -2.4933, -4.1398],
+         [-1.8464, -2.3008, -3.2725,  ..., -1.2311, -2.4933, -4.1398],
+         [-1.8464, -2.3008, -3.2725,  ..., -1.2311, -2.4933, -4.1398]],
+        [[-1.5637, -1.6004, -2.9162,  ..., -1.0443, -1.7257, -3.7656],
+         [-2.0858, -1.1814, -2.0546,  ..., -0.7589, -2.3832, -3.8086],
+         [-1.4352, -1.6926, -3.6182,  ..., -1.2024, -1.2755, -1.4043],
+         ...,
+         [-1.8748, -2.2987, -3.4017,  ..., -1.1458, -2.4021, -4.2418],
+         [-1.8748, -2.2987, -3.4017,  ..., -1.1458, -2.4021, -4.2418],
+         [-1.8748, -2.2987, -3.4017,  ..., -1.1458, -2.4021, -4.2418]],
+        [[-1.8979, -1.1393, -2.6692,  ..., -0.6655, -1.2118, -1.9079],
+         [-2.3046, -2.1299, -1.3325,  ..., -0.8691, -2.7452, -2.5897],
+         [-1.9805, -2.1050, -3.0666,  ..., -2.4092, -1.2841, -2.7309],
+         ...,
+         [-2.1193, -1.9070, -3.3031,  ..., -1.3027, -2.5009, -3.6167],
+         [-2.1193, -1.9070, -3.3031,  ..., -1.3027, -2.5009, -3.6167],
+         [-2.1193, -1.9070, -3.3031,  ..., -1.3027, -2.5009, -3.6167]],
+        ...,
+        [[-1.8458, -2.2785, -1.6877,  ..., -1.9394, -1.7692, -2.2286],
+         [-2.1740, -1.6562, -1.4362,  ..., -1.5322, -3.4954, -3.0583],
+         [-2.7159, -2.3375, -2.0061,  ..., -2.1384, -1.6491, -1.6889],
+         ...,
+         [-2.0781, -2.7512, -2.9689,  ..., -1.6462, -2.6287, -3.7575],
+         [-2.0781, -2.7512, -2.9689,  ..., -1.6462, -2.6287, -3.7575],
+         [-2.0781, -2.7512, -2.9689,  ..., -1.6462, -2.6287, -3.7575]],
+        [[-2.0288, -2.2733, -2.6458,  ..., -1.1893, -2.0423, -2.6683],
+         [-1.9232, -1.6296, -1.9133,  ..., -0.9144, -2.7223, -3.6550],
+         [-1.6089, -2.1238, -2.4265,  ..., -2.0654, -1.8380, -2.0351],
+         ...,
+         [-2.0245, -2.0771, -3.1898,  ..., -1.2838, -2.4547, -3.9363],
+         [-2.0245, -2.0771, -3.1898,  ..., -1.2838, -2.4547, -3.9363],
+         [-2.0245, -2.0771, -3.1898,  ..., -1.2838, -2.4547, -3.9363]],
+        [[-2.3452, -1.0875, -2.6630,  ..., -1.1130, -1.5229, -3.1627],
+         [-1.9489, -1.9629, -2.3405,  ..., -0.7341, -3.2851, -3.0254],
+         [-3.3413, -3.1370, -3.6219,  ..., -0.7239, -0.3849, -1.3667],
+         ...,
+         [-2.1265, -1.7873, -3.3149,  ..., -1.4047, -2.4603, -3.9243],
+         [-2.1265, -1.7873, -3.3149,  ..., -1.4047, -2.4603, -3.9243],
+         [-2.1265, -1.7873, -3.3149,  ..., -1.4047, -2.4603, -3.9243]]],
+       device='cuda:0'), hidden_states=None, attentions=None)

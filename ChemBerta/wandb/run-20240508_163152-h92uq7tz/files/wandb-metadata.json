@@ -1,0 +1,108 @@
+{
+    "os": "Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.12.3",
+    "heartbeatAt": "2024-05-08T20:31:54.853571",
+    "startedAt": "2024-05-08T20:31:52.762240",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py",
+    "codePathLocal": "run_script.py",
+    "codePath": "t5-chem/run_script.py",
+    "git": {
+        "remote": "https://github.com/shagunm1210/MolFoundation.git",
+        "commit": "b5977fd5fe12878c3471e727cfb06af495aa9469"
+    },
+    "email": "stanley.lo@mail.utoronto.ca",
+    "root": "/home/stanlo229/Research/Repos/MolFoundation",
+    "host": "DESKTOP-HET59N2",
+    "username": "stanlo229",
+    "executable": "/home/stanlo229/anaconda3/envs/MolFoundation/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3700.036999999999,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3700.037,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 25.99950408935547
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3070 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3070 Ti",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 15.579334259033203
+    }
+}
