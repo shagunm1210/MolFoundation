@@ -1,0 +1,61 @@
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at seyonec/ChemBERTa-zinc-base-v1 were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+roberta RobertaModel(
+  (embeddings): RobertaEmbeddings(
+    (word_embeddings): Embedding(767, 768, padding_idx=1)
+    (position_embeddings): Embedding(514, 768, padding_idx=1)
+    (token_type_embeddings): Embedding(1, 768)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (encoder): RobertaEncoder(
+    (layer): ModuleList(
+      (0-5): 6 x RobertaLayer(
+        (attention): RobertaAttention(
+          (self): RobertaSelfAttention(
+            (query): Linear(in_features=768, out_features=768, bias=True)
+            (key): Linear(in_features=768, out_features=768, bias=True)
+            (value): Linear(in_features=768, out_features=768, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): RobertaSelfOutput(
+            (dense): Linear(in_features=768, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): RobertaIntermediate(
+          (dense): Linear(in_features=768, out_features=3072, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): RobertaOutput(
+          (dense): Linear(in_features=3072, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+lm_head RobertaLMHead(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (decoder): Linear(in_features=768, out_features=767, bias=True)
+)
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 33, in <module>
+    data = pd.read_csv(data_path)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../../../Datasets/qm9/gdb9_sample_10k.csv'

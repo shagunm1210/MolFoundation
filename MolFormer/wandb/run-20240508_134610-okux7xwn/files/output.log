@@ -1,0 +1,6 @@
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py", line 19, in <module>
+    LLModel = AutoModelForMaskedLM.from_pretrained("seyonec/ChemBERTa-zinc-base-v1")
+NameError: name 'AutoModelForMaskedLM' is not defined

@@ -1,0 +1,159 @@
+2024-05-08 14:12:18,536 INFO    StreamThr :4108511 [internal.py:wandb_internal():85] W&B internal server running at pid: 4108511, started at: 2024-05-08 14:12:18.534664
+2024-05-08 14:12:18,542 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: status
+2024-05-08 14:12:18,542 INFO    WriterThread:4108511 [datastore.py:open_for_write():87] open: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/run-7rh4m4ku.wandb
+2024-05-08 14:12:18,544 DEBUG   SenderThread:4108511 [sender.py:send():378] send: header
+2024-05-08 14:12:18,550 DEBUG   SenderThread:4108511 [sender.py:send():378] send: run
+2024-05-08 14:12:18,755 INFO    SenderThread:4108511 [dir_watcher.py:__init__():211] watching files in: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files
+2024-05-08 14:12:18,755 INFO    SenderThread:4108511 [sender.py:_start_run_threads():1123] run started: 7rh4m4ku with start time 1715202738.539867
+2024-05-08 14:12:18,760 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: check_version
+2024-05-08 14:12:18,760 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: check_version
+2024-05-08 14:12:18,801 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: run_start
+2024-05-08 14:12:18,838 DEBUG   HandlerThread:4108511 [system_info.py:__init__():26] System info init
+2024-05-08 14:12:18,838 DEBUG   HandlerThread:4108511 [system_info.py:__init__():41] System info init done
+2024-05-08 14:12:18,838 INFO    HandlerThread:4108511 [system_monitor.py:start():194] Starting system monitor
+2024-05-08 14:12:18,838 INFO    SystemMonitor:4108511 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-08 14:12:18,838 INFO    HandlerThread:4108511 [system_monitor.py:probe():214] Collecting system info
+2024-05-08 14:12:18,839 INFO    SystemMonitor:4108511 [interfaces.py:start():188] Started cpu monitoring
+2024-05-08 14:12:18,839 INFO    SystemMonitor:4108511 [interfaces.py:start():188] Started disk monitoring
+2024-05-08 14:12:18,840 INFO    SystemMonitor:4108511 [interfaces.py:start():188] Started gpu monitoring
+2024-05-08 14:12:18,840 INFO    SystemMonitor:4108511 [interfaces.py:start():188] Started memory monitoring
+2024-05-08 14:12:18,841 INFO    SystemMonitor:4108511 [interfaces.py:start():188] Started network monitoring
+2024-05-08 14:12:18,886 DEBUG   HandlerThread:4108511 [system_info.py:probe():150] Probing system
+2024-05-08 14:12:18,887 DEBUG   HandlerThread:4108511 [system_info.py:_probe_git():135] Probing git
+2024-05-08 14:12:18,899 DEBUG   HandlerThread:4108511 [system_info.py:_probe_git():143] Probing git done
+2024-05-08 14:12:18,899 DEBUG   HandlerThread:4108511 [system_info.py:probe():198] Probing system done
+2024-05-08 14:12:18,899 DEBUG   HandlerThread:4108511 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-174-generic-x86_64-with-glibc2.31', 'python': '3.10.14', 'heartbeatAt': '2024-05-08T21:12:18.886881', 'startedAt': '2024-05-08T21:12:18.517100', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/run_script.py', 'codePathLocal': 'run_script.py', 'codePath': 'MolFormer/run_script.py', 'git': {'remote': 'https://github.com/shagunm1210/MolFoundation.git', 'commit': '9494ddc035e2e4001e536dad0488481ccb806d06'}, 'email': None, 'root': '/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation', 'host': 'lambda0', 'username': 'avasan', 'executable': '/homes/avasan/miniforge3_new/envs/sst_llama/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 2481.7473250000007, 'min': 1000.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3105.963, 'min': 1000.0, 'max': 3700.0}, {'current': 2952.291, 'min': 1000.0, 'max': 3700.0}, {'current': 2467.443, 'min': 1000.0, 'max': 3700.0}, {'current': 2599.347, 'min': 1000.0, 'max': 3700.0}, {'current': 2723.457, 'min': 1000.0, 'max': 3700.0}, {'current': 2765.787, 'min': 1000.0, 'max': 3700.0}, {'current': 3331.452, 'min': 1000.0, 'max': 3700.0}, {'current': 2764.486, 'min': 1000.0, 'max': 3700.0}, {'current': 2665.328, 'min': 1000.0, 'max': 3700.0}, {'current': 2659.556, 'min': 1000.0, 'max': 3700.0}, {'current': 2636.154, 'min': 1000.0, 'max': 3700.0}, {'current': 3082.302, 'min': 1000.0, 'max': 3700.0}, {'current': 3171.803, 'min': 1000.0, 'max': 3700.0}, {'current': 2799.534, 'min': 1000.0, 'max': 3700.0}, {'current': 2672.149, 'min': 1000.0, 'max': 3700.0}, {'current': 3264.471, 'min': 1000.0, 'max': 3700.0}, {'current': 3023.981, 'min': 1000.0, 'max': 3700.0}, {'current': 2820.167, 'min': 1000.0, 'max': 3700.0}, {'current': 2603.306, 'min': 1000.0, 'max': 3700.0}, {'current': 3006.755, 'min': 1000.0, 'max': 3700.0}, {'current': 1175.963, 'min': 1000.0, 'max': 3700.0}, {'current': 1356.493, 'min': 1000.0, 'max': 3700.0}, {'current': 1195.15, 'min': 1000.0, 'max': 3700.0}, {'current': 1200.702, 'min': 1000.0, 'max': 3700.0}, {'current': 1211.895, 'min': 1000.0, 'max': 3700.0}, {'current': 1382.306, 'min': 1000.0, 'max': 3700.0}, {'current': 1274.81, 'min': 1000.0, 'max': 3700.0}, {'current': 1337.401, 'min': 1000.0, 'max': 3700.0}, {'current': 1304.714, 'min': 1000.0, 'max': 3700.0}, {'current': 1493.178, 'min': 1000.0, 'max': 3700.0}, {'current': 2284.14, 'min': 1000.0, 'max': 3700.0}, {'current': 2654.435, 'min': 1000.0, 'max': 3700.0}, {'current': 2682.583, 'min': 1000.0, 'max': 3700.0}, {'current': 2465.811, 'min': 1000.0, 'max': 3700.0}, {'current': 1519.638, 'min': 1000.0, 'max': 3700.0}, {'current': 2664.784, 'min': 1000.0, 'max': 3700.0}, {'current': 2681.265, 'min': 1000.0, 'max': 3700.0}, {'current': 2365.207, 'min': 1000.0, 'max': 3700.0}, {'current': 1887.084, 'min': 1000.0, 'max': 3700.0}, {'current': 2766.374, 'min': 1000.0, 'max': 3700.0}, {'current': 2955.927, 'min': 1000.0, 'max': 3700.0}, {'current': 3037.071, 'min': 1000.0, 'max': 3700.0}, {'current': 2698.397, 'min': 1000.0, 'max': 3700.0}, {'current': 2604.794, 'min': 1000.0, 'max': 3700.0}, {'current': 3016.833, 'min': 1000.0, 'max': 3700.0}, {'current': 3010.479, 'min': 1000.0, 'max': 3700.0}, {'current': 3498.415, 'min': 1000.0, 'max': 3700.0}, {'current': 2815.751, 'min': 1000.0, 'max': 3700.0}, {'current': 2654.141, 'min': 1000.0, 'max': 3700.0}, {'current': 2661.405, 'min': 1000.0, 'max': 3700.0}, {'current': 2655.389, 'min': 1000.0, 'max': 3700.0}, {'current': 2546.549, 'min': 1000.0, 'max': 3700.0}, {'current': 3223.827, 'min': 1000.0, 'max': 3700.0}, {'current': 3305.638, 'min': 1000.0, 'max': 3700.0}, {'current': 2686.204, 'min': 1000.0, 'max': 3700.0}, {'current': 3018.976, 'min': 1000.0, 'max': 3700.0}, {'current': 2709.918, 'min': 1000.0, 'max': 3700.0}, {'current': 3227.305, 'min': 1000.0, 'max': 3700.0}, {'current': 2784.185, 'min': 1000.0, 'max': 3700.0}, {'current': 2487.571, 'min': 1000.0, 'max': 3700.0}, {'current': 2319.62, 'min': 1000.0, 'max': 3700.0}, {'current': 2162.751, 'min': 1000.0, 'max': 3700.0}, {'current': 2547.013, 'min': 1000.0, 'max': 3700.0}, {'current': 2385.864, 'min': 1000.0, 'max': 3700.0}, {'current': 2165.923, 'min': 1000.0, 'max': 3700.0}, {'current': 1925.405, 'min': 1000.0, 'max': 3700.0}, {'current': 1618.645, 'min': 1000.0, 'max': 3700.0}, {'current': 2582.857, 'min': 1000.0, 'max': 3700.0}, {'current': 1725.749, 'min': 1000.0, 'max': 3700.0}, {'current': 1557.658, 'min': 1000.0, 'max': 3700.0}, {'current': 2229.998, 'min': 1000.0, 'max': 3700.0}, {'current': 2645.515, 'min': 1000.0, 'max': 3700.0}, {'current': 2676.951, 'min': 1000.0, 'max': 3700.0}, {'current': 1692.635, 'min': 1000.0, 'max': 3700.0}, {'current': 2304.898, 'min': 1000.0, 'max': 3700.0}, {'current': 2608.963, 'min': 1000.0, 'max': 3700.0}, {'current': 1991.91, 'min': 1000.0, 'max': 3700.0}, {'current': 2142.73, 'min': 1000.0, 'max': 3700.0}, {'current': 2298.27, 'min': 1000.0, 'max': 3700.0}, {'current': 2790.347, 'min': 1000.0, 'max': 3700.0}], 'disk': {'/': {'total': 1758.8579597473145, 'used': 591.1247673034668}}, 'gpu': 'Tesla V100-SXM2-32GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}], 'memory': {'total': 503.5380401611328}}
+2024-05-08 14:12:18,900 INFO    HandlerThread:4108511 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-08 14:12:18,900 INFO    HandlerThread:4108511 [system_monitor.py:probe():227] Publishing system info
+2024-05-08 14:12:18,900 DEBUG   HandlerThread:4108511 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-08 14:12:19,757 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/conda-environment.yaml
+2024-05-08 14:12:23,184 DEBUG   HandlerThread:4108511 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-08 14:12:23,192 INFO    HandlerThread:4108511 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-08 14:12:23,224 DEBUG   SenderThread:4108511 [sender.py:send():378] send: files
+2024-05-08 14:12:23,224 INFO    SenderThread:4108511 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-08 14:12:23,464 INFO    wandb-upload_0:4108511 [upload_job.py:push():130] Uploaded file /tmp/tmppum0z6h2wandb/lpimb6wt-wandb-metadata.json
+2024-05-08 14:12:23,526 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-08 14:12:23,526 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-08 14:12:23,526 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: python_packages
+2024-05-08 14:12:23,533 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: stop_status
+2024-05-08 14:12:23,663 DEBUG   SenderThread:4108511 [sender.py:send():378] send: telemetry
+2024-05-08 14:12:23,663 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 14:12:23,761 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/conda-environment.yaml
+2024-05-08 14:12:23,761 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:23,762 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-metadata.json
+2024-05-08 14:12:23,762 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/requirements.txt
+2024-05-08 14:12:25,763 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:26,084 DEBUG   SenderThread:4108511 [sender.py:send():378] send: telemetry
+2024-05-08 14:12:27,631 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: partial_history
+2024-05-08 14:12:27,637 DEBUG   SenderThread:4108511 [sender.py:send():378] send: history
+2024-05-08 14:12:27,643 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: summary_record
+2024-05-08 14:12:27,690 INFO    SenderThread:4108511 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 14:12:27,766 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:27,766 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-summary.json
+2024-05-08 14:12:28,720 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 14:12:28,839 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:30,013 DEBUG   SenderThread:4108511 [sender.py:send():378] send: exit
+2024-05-08 14:12:30,013 INFO    SenderThread:4108511 [sender.py:send_exit():585] handling exit code: 255
+2024-05-08 14:12:30,013 INFO    SenderThread:4108511 [sender.py:send_exit():587] handling runtime: 11
+2024-05-08 14:12:30,020 INFO    SenderThread:4108511 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 14:12:30,020 INFO    SenderThread:4108511 [sender.py:send_exit():593] send defer
+2024-05-08 14:12:30,021 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:30,021 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 0
+2024-05-08 14:12:30,021 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:30,021 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-05-08 14:12:30,021 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 1
+2024-05-08 14:12:30,021 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:30,021 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 1
+2024-05-08 14:12:30,021 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:30,021 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-05-08 14:12:30,021 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 2
+2024-05-08 14:12:30,021 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:30,021 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 2
+2024-05-08 14:12:30,021 INFO    HandlerThread:4108511 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-08 14:12:30,022 DEBUG   SystemMonitor:4108511 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-08 14:12:30,022 DEBUG   SystemMonitor:4108511 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-08 14:12:30,022 INFO    HandlerThread:4108511 [interfaces.py:finish():200] Joined cpu monitor
+2024-05-08 14:12:30,022 DEBUG   SystemMonitor:4108511 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-08 14:12:30,022 INFO    HandlerThread:4108511 [interfaces.py:finish():200] Joined disk monitor
+2024-05-08 14:12:31,110 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:31,110 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-summary.json
+2024-05-08 14:12:31,761 INFO    HandlerThread:4108511 [interfaces.py:finish():200] Joined gpu monitor
+2024-05-08 14:12:31,761 INFO    HandlerThread:4108511 [interfaces.py:finish():200] Joined memory monitor
+2024-05-08 14:12:31,761 INFO    HandlerThread:4108511 [interfaces.py:finish():200] Joined network monitor
+2024-05-08 14:12:31,761 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 14:12:31,762 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,762 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-05-08 14:12:31,762 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 3
+2024-05-08 14:12:31,762 DEBUG   SenderThread:4108511 [sender.py:send():378] send: stats
+2024-05-08 14:12:31,762 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:31,763 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 14:12:31,763 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 3
+2024-05-08 14:12:31,763 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,763 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-05-08 14:12:31,763 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 4
+2024-05-08 14:12:31,763 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:31,763 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 4
+2024-05-08 14:12:31,763 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,763 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-05-08 14:12:31,763 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 5
+2024-05-08 14:12:31,764 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:31,764 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 5
+2024-05-08 14:12:31,764 DEBUG   SenderThread:4108511 [sender.py:send():378] send: summary
+2024-05-08 14:12:31,770 INFO    SenderThread:4108511 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 14:12:31,771 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,771 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-05-08 14:12:31,771 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 6
+2024-05-08 14:12:31,771 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:31,771 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 6
+2024-05-08 14:12:31,771 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,771 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-05-08 14:12:31,774 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 14:12:31,823 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 7
+2024-05-08 14:12:31,823 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:31,823 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 7
+2024-05-08 14:12:31,823 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:31,823 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-05-08 14:12:32,059 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/config.yaml
+2024-05-08 14:12:32,060 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:32,060 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-summary.json
+2024-05-08 14:12:32,111 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 14:12:35,033 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 8
+2024-05-08 14:12:35,033 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 14:12:35,033 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:35,033 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 8
+2024-05-08 14:12:35,034 DEBUG   SenderThread:4108511 [sender.py:send_request():405] send_request: defer
+2024-05-08 14:12:35,034 INFO    SenderThread:4108511 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-05-08 14:12:35,034 INFO    SenderThread:4108511 [job_builder.py:build():432] Attempting to build job artifact
+2024-05-08 14:12:35,034 INFO    SenderThread:4108511 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-05-08 14:12:35,062 INFO    Thread-12 :4108511 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:35,067 INFO    SenderThread:4108511 [job_builder.py:build():541] adding wandb-job metadata file
+2024-05-08 14:12:35,082 INFO    SenderThread:4108511 [sender.py:transition_state():613] send defer: 9
+2024-05-08 14:12:35,083 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 14:12:35,083 DEBUG   SenderThread:4108511 [sender.py:send():378] send: artifact
+2024-05-08 14:12:35,083 INFO    HandlerThread:4108511 [handler.py:handle_request_defer():184] handle defer: 9
+2024-05-08 14:12:35,112 DEBUG   HandlerThread:4108511 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 14:12:35,541 INFO    wandb-upload_1:4108511 [upload_job.py:push():88] Uploaded file /tmp/tmp8x5izqnb/wandb-job.json
+2024-05-08 14:12:35,554 INFO    wandb-upload_0:4108511 [upload_job.py:push():88] Uploaded file /homes/avasan/.local/share/wandb/artifacts/staging/tmpa79mvgpo
+2024-05-08 14:12:35,790 WARNING StreamThr :4108511 [internal.py:is_dead():413] Internal process exiting, parent pid 4108217 disappeared
+2024-05-08 14:12:35,790 ERROR   StreamThr :4108511 [internal.py:wandb_internal():151] Internal process shutdown.
+2024-05-08 14:12:35,998 INFO    SenderThread:4108511 [sender.py:send_artifact():1467] sent artifact job-https___github.com_shagunm1210_MolFoundation.git_MolFormer_run_script.py - {'id': 'QXJ0aWZhY3Q6ODI3OTg3NDE5', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MjMwNTk1OQ==', 'latestArtifact': None}}
+2024-05-08 14:12:35,998 INFO    SenderThread:4108511 [sender.py:finish():1545] shutting down sender
+2024-05-08 14:12:35,998 INFO    SenderThread:4108511 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-08 14:12:36,063 INFO    SenderThread:4108511 [dir_watcher.py:finish():388] scan: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files
+2024-05-08 14:12:36,063 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/config.yaml config.yaml
+2024-05-08 14:12:36,064 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/conda-environment.yaml conda-environment.yaml
+2024-05-08 14:12:36,065 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-metadata.json wandb-metadata.json
+2024-05-08 14:12:36,066 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/requirements.txt requirements.txt
+2024-05-08 14:12:36,067 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log output.log
+2024-05-08 14:12:36,070 INFO    SenderThread:4108511 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-summary.json wandb-summary.json
+2024-05-08 14:12:36,070 INFO    SenderThread:4108511 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-08 14:12:36,071 INFO    SenderThread:4108511 [file_pusher.py:join():175] waiting for file pusher
+2024-05-08 14:12:36,113 INFO    HandlerThread:4108511 [handler.py:finish():882] shutting down handler
+2024-05-08 14:12:36,113 INFO    WriterThread:4108511 [datastore.py:close():296] close: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/run-7rh4m4ku.wandb
+2024-05-08 14:12:36,242 INFO    wandb-upload_1:4108511 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/config.yaml
+2024-05-08 14:12:36,258 INFO    wandb-upload_4:4108511 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/wandb-summary.json
+2024-05-08 14:12:36,291 INFO    wandb-upload_2:4108511 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/requirements.txt
+2024-05-08 14:12:36,296 INFO    wandb-upload_0:4108511 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/conda-environment.yaml
+2024-05-08 14:12:36,371 INFO    wandb-upload_3:4108511 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation/MolFormer/wandb/run-20240508_141218-7rh4m4ku/files/output.log
+2024-05-08 14:12:36,572 INFO    SenderThread:4108511 [file_stream.py:finish():601] file stream finish called
+2024-05-08 14:12:36,603 INFO    SenderThread:4108511 [file_stream.py:finish():605] file stream finish is done

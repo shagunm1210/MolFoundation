@@ -1,0 +1,188 @@
+2024-05-08 13:54:26,956 INFO    StreamThr :4080232 [internal.py:wandb_internal():85] W&B internal server running at pid: 4080232, started at: 2024-05-08 13:54:26.954517
+2024-05-08 13:54:26,961 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: status
+2024-05-08 13:54:26,962 INFO    WriterThread:4080232 [datastore.py:open_for_write():87] open: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/run-bycxpl4i.wandb
+2024-05-08 13:54:26,964 DEBUG   SenderThread:4080232 [sender.py:send():378] send: header
+2024-05-08 13:54:26,964 DEBUG   SenderThread:4080232 [sender.py:send():378] send: run
+2024-05-08 13:54:26,974 DEBUG   SenderThread:4080232 [gitlib.py:_init_repo():56] git repository is invalid
+2024-05-08 13:54:27,098 INFO    SenderThread:4080232 [dir_watcher.py:__init__():211] watching files in: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files
+2024-05-08 13:54:27,098 INFO    SenderThread:4080232 [sender.py:_start_run_threads():1123] run started: bycxpl4i with start time 1715201666.958708
+2024-05-08 13:54:27,103 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: check_version
+2024-05-08 13:54:27,103 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: check_version
+2024-05-08 13:54:27,146 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: run_start
+2024-05-08 13:54:27,182 DEBUG   HandlerThread:4080232 [system_info.py:__init__():26] System info init
+2024-05-08 13:54:27,182 DEBUG   HandlerThread:4080232 [system_info.py:__init__():41] System info init done
+2024-05-08 13:54:27,182 INFO    HandlerThread:4080232 [system_monitor.py:start():194] Starting system monitor
+2024-05-08 13:54:27,183 INFO    SystemMonitor:4080232 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-08 13:54:27,183 INFO    HandlerThread:4080232 [system_monitor.py:probe():214] Collecting system info
+2024-05-08 13:54:27,183 INFO    SystemMonitor:4080232 [interfaces.py:start():188] Started cpu monitoring
+2024-05-08 13:54:27,183 INFO    SystemMonitor:4080232 [interfaces.py:start():188] Started disk monitoring
+2024-05-08 13:54:27,184 INFO    SystemMonitor:4080232 [interfaces.py:start():188] Started gpu monitoring
+2024-05-08 13:54:27,185 INFO    SystemMonitor:4080232 [interfaces.py:start():188] Started memory monitoring
+2024-05-08 13:54:27,185 INFO    SystemMonitor:4080232 [interfaces.py:start():188] Started network monitoring
+2024-05-08 13:54:27,231 DEBUG   HandlerThread:4080232 [system_info.py:probe():150] Probing system
+2024-05-08 13:54:27,231 DEBUG   HandlerThread:4080232 [gitlib.py:_init_repo():56] git repository is invalid
+2024-05-08 13:54:27,231 DEBUG   HandlerThread:4080232 [system_info.py:probe():198] Probing system done
+2024-05-08 13:54:27,231 DEBUG   HandlerThread:4080232 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-174-generic-x86_64-with-glibc2.31', 'python': '3.10.14', 'heartbeatAt': '2024-05-08T20:54:27.231377', 'startedAt': '2024-05-08T20:54:26.939229', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/run_script.py', 'codePathLocal': 'run_script.py', 'codePath': 'run_script.py', 'host': 'lambda0', 'username': 'avasan', 'executable': '/homes/avasan/miniforge3_new/envs/sst_llama/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 2874.5110875, 'min': 1000.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3264.21, 'min': 1000.0, 'max': 3700.0}, {'current': 3286.843, 'min': 1000.0, 'max': 3700.0}, {'current': 2593.153, 'min': 1000.0, 'max': 3700.0}, {'current': 2600.661, 'min': 1000.0, 'max': 3700.0}, {'current': 2349.018, 'min': 1000.0, 'max': 3700.0}, {'current': 3402.229, 'min': 1000.0, 'max': 3700.0}, {'current': 3100.178, 'min': 1000.0, 'max': 3700.0}, {'current': 2575.76, 'min': 1000.0, 'max': 3700.0}, {'current': 2619.281, 'min': 1000.0, 'max': 3700.0}, {'current': 3202.694, 'min': 1000.0, 'max': 3700.0}, {'current': 3078.841, 'min': 1000.0, 'max': 3700.0}, {'current': 1932.87, 'min': 1000.0, 'max': 3700.0}, {'current': 2755.335, 'min': 1000.0, 'max': 3700.0}, {'current': 1920.836, 'min': 1000.0, 'max': 3700.0}, {'current': 3305.064, 'min': 1000.0, 'max': 3700.0}, {'current': 2309.724, 'min': 1000.0, 'max': 3700.0}, {'current': 2129.443, 'min': 1000.0, 'max': 3700.0}, {'current': 3037.882, 'min': 1000.0, 'max': 3700.0}, {'current': 3260.436, 'min': 1000.0, 'max': 3700.0}, {'current': 2012.342, 'min': 1000.0, 'max': 3700.0}, {'current': 2580.518, 'min': 1000.0, 'max': 3700.0}, {'current': 3102.16, 'min': 1000.0, 'max': 3700.0}, {'current': 2584.349, 'min': 1000.0, 'max': 3700.0}, {'current': 3165.789, 'min': 1000.0, 'max': 3700.0}, {'current': 3265.189, 'min': 1000.0, 'max': 3700.0}, {'current': 3142.344, 'min': 1000.0, 'max': 3700.0}, {'current': 2635.542, 'min': 1000.0, 'max': 3700.0}, {'current': 3131.053, 'min': 1000.0, 'max': 3700.0}, {'current': 2635.618, 'min': 1000.0, 'max': 3700.0}, {'current': 3086.422, 'min': 1000.0, 'max': 3700.0}, {'current': 2879.915, 'min': 1000.0, 'max': 3700.0}, {'current': 2642.886, 'min': 1000.0, 'max': 3700.0}, {'current': 3177.595, 'min': 1000.0, 'max': 3700.0}, {'current': 2816.318, 'min': 1000.0, 'max': 3700.0}, {'current': 2681.943, 'min': 1000.0, 'max': 3700.0}, {'current': 2654.581, 'min': 1000.0, 'max': 3700.0}, {'current': 3080.063, 'min': 1000.0, 'max': 3700.0}, {'current': 2934.716, 'min': 1000.0, 'max': 3700.0}, {'current': 3252.425, 'min': 1000.0, 'max': 3700.0}, {'current': 2577.334, 'min': 1000.0, 'max': 3700.0}, {'current': 2275.985, 'min': 1000.0, 'max': 3700.0}, {'current': 2713.002, 'min': 1000.0, 'max': 3700.0}, {'current': 2587.378, 'min': 1000.0, 'max': 3700.0}, {'current': 2592.788, 'min': 1000.0, 'max': 3700.0}, {'current': 2610.377, 'min': 1000.0, 'max': 3700.0}, {'current': 2902.223, 'min': 1000.0, 'max': 3700.0}, {'current': 3155.465, 'min': 1000.0, 'max': 3700.0}, {'current': 1749.366, 'min': 1000.0, 'max': 3700.0}, {'current': 2652.523, 'min': 1000.0, 'max': 3700.0}, {'current': 3122.98, 'min': 1000.0, 'max': 3700.0}, {'current': 2903.093, 'min': 1000.0, 'max': 3700.0}, {'current': 2585.743, 'min': 1000.0, 'max': 3700.0}, {'current': 2979.319, 'min': 1000.0, 'max': 3700.0}, {'current': 2309.713, 'min': 1000.0, 'max': 3700.0}, {'current': 1988.325, 'min': 1000.0, 'max': 3700.0}, {'current': 2643.803, 'min': 1000.0, 'max': 3700.0}, {'current': 2716.588, 'min': 1000.0, 'max': 3700.0}, {'current': 3107.077, 'min': 1000.0, 'max': 3700.0}, {'current': 3241.696, 'min': 1000.0, 'max': 3700.0}, {'current': 2196.96, 'min': 1000.0, 'max': 3700.0}, {'current': 2573.293, 'min': 1000.0, 'max': 3700.0}, {'current': 2655.918, 'min': 1000.0, 'max': 3700.0}, {'current': 2583.79, 'min': 1000.0, 'max': 3700.0}, {'current': 3326.843, 'min': 1000.0, 'max': 3700.0}, {'current': 3392.132, 'min': 1000.0, 'max': 3700.0}, {'current': 3043.979, 'min': 1000.0, 'max': 3700.0}, {'current': 2597.207, 'min': 1000.0, 'max': 3700.0}, {'current': 2508.398, 'min': 1000.0, 'max': 3700.0}, {'current': 2646.122, 'min': 1000.0, 'max': 3700.0}, {'current': 2657.379, 'min': 1000.0, 'max': 3700.0}, {'current': 3006.008, 'min': 1000.0, 'max': 3700.0}, {'current': 2629.118, 'min': 1000.0, 'max': 3700.0}, {'current': 3434.665, 'min': 1000.0, 'max': 3700.0}, {'current': 2931.964, 'min': 1000.0, 'max': 3700.0}, {'current': 2683.617, 'min': 1000.0, 'max': 3700.0}, {'current': 3010.921, 'min': 1000.0, 'max': 3700.0}, {'current': 3008.264, 'min': 1000.0, 'max': 3700.0}, {'current': 2763.181, 'min': 1000.0, 'max': 3700.0}, {'current': 3394.005, 'min': 1000.0, 'max': 3700.0}, {'current': 2903.653, 'min': 1000.0, 'max': 3700.0}], 'disk': {'/': {'total': 1758.8579597473145, 'used': 591.1911468505859}}, 'gpu': 'Tesla V100-SXM2-32GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100-SXM2-32GB', 'memory_total': 34359738368}], 'memory': {'total': 503.5380401611328}}
+2024-05-08 13:54:27,231 INFO    HandlerThread:4080232 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-08 13:54:27,231 INFO    HandlerThread:4080232 [system_monitor.py:probe():227] Publishing system info
+2024-05-08 13:54:27,232 DEBUG   HandlerThread:4080232 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-08 13:54:28,100 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/conda-environment.yaml
+2024-05-08 13:54:31,100 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/conda-environment.yaml
+2024-05-08 13:54:31,115 DEBUG   HandlerThread:4080232 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-08 13:54:31,126 INFO    HandlerThread:4080232 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-08 13:54:31,160 DEBUG   SenderThread:4080232 [sender.py:send():378] send: files
+2024-05-08 13:54:31,160 INFO    SenderThread:4080232 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-08 13:54:31,297 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-08 13:54:31,298 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-08 13:54:31,298 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: python_packages
+2024-05-08 13:54:31,307 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: stop_status
+2024-05-08 13:54:31,385 INFO    wandb-upload_0:4080232 [upload_job.py:push():130] Uploaded file /tmp/tmp30e6gyuewandb/uwnplh43-wandb-metadata.json
+2024-05-08 13:54:31,439 DEBUG   SenderThread:4080232 [sender.py:send():378] send: telemetry
+2024-05-08 13:54:32,101 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log
+2024-05-08 13:54:32,101 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-metadata.json
+2024-05-08 13:54:32,101 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/requirements.txt
+2024-05-08 13:54:32,442 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 13:54:33,531 DEBUG   SenderThread:4080232 [sender.py:send():378] send: telemetry
+2024-05-08 13:54:34,102 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log
+2024-05-08 13:54:34,877 DEBUG   SenderThread:4080232 [sender.py:send():378] send: exit
+2024-05-08 13:54:34,877 INFO    SenderThread:4080232 [sender.py:send_exit():585] handling exit code: 1
+2024-05-08 13:54:34,877 INFO    SenderThread:4080232 [sender.py:send_exit():587] handling runtime: 7
+2024-05-08 13:54:34,883 INFO    SenderThread:4080232 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 13:54:34,884 INFO    SenderThread:4080232 [sender.py:send_exit():593] send defer
+2024-05-08 13:54:34,884 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:34,884 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 0
+2024-05-08 13:54:34,884 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:34,884 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-05-08 13:54:34,885 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 1
+2024-05-08 13:54:34,885 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:34,885 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 1
+2024-05-08 13:54:34,885 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:34,885 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-05-08 13:54:34,885 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 2
+2024-05-08 13:54:34,885 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:34,885 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 2
+2024-05-08 13:54:34,885 INFO    HandlerThread:4080232 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-08 13:54:34,885 DEBUG   SystemMonitor:4080232 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-08 13:54:34,886 INFO    HandlerThread:4080232 [interfaces.py:finish():200] Joined cpu monitor
+2024-05-08 13:54:34,886 DEBUG   SystemMonitor:4080232 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-08 13:54:34,886 INFO    HandlerThread:4080232 [interfaces.py:finish():200] Joined disk monitor
+2024-05-08 13:54:34,886 DEBUG   SystemMonitor:4080232 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-08 13:54:35,103 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-summary.json
+2024-05-08 13:54:36,107 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log
+2024-05-08 13:54:36,372 INFO    HandlerThread:4080232 [interfaces.py:finish():200] Joined gpu monitor
+2024-05-08 13:54:36,372 INFO    HandlerThread:4080232 [interfaces.py:finish():200] Joined memory monitor
+2024-05-08 13:54:36,372 INFO    HandlerThread:4080232 [interfaces.py:finish():200] Joined network monitor
+2024-05-08 13:54:36,372 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 13:54:36,373 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,373 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-05-08 13:54:36,373 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 3
+2024-05-08 13:54:36,374 DEBUG   SenderThread:4080232 [sender.py:send():378] send: stats
+2024-05-08 13:54:36,375 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 13:54:36,375 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:36,375 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 3
+2024-05-08 13:54:36,376 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,376 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-05-08 13:54:36,376 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 4
+2024-05-08 13:54:36,376 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:36,376 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 4
+2024-05-08 13:54:36,376 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,376 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-05-08 13:54:36,376 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 5
+2024-05-08 13:54:36,376 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:36,377 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 5
+2024-05-08 13:54:36,377 DEBUG   SenderThread:4080232 [sender.py:send():378] send: summary
+2024-05-08 13:54:36,384 INFO    SenderThread:4080232 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-08 13:54:36,385 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,385 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-05-08 13:54:36,385 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 6
+2024-05-08 13:54:36,385 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:36,385 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 6
+2024-05-08 13:54:36,385 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,385 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-05-08 13:54:36,391 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: status_report
+2024-05-08 13:54:36,495 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 7
+2024-05-08 13:54:36,496 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:36,496 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 7
+2024-05-08 13:54:36,496 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:36,496 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-05-08 13:54:36,878 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 13:54:37,107 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-summary.json
+2024-05-08 13:54:37,107 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/config.yaml
+2024-05-08 13:54:37,491 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 8
+2024-05-08 13:54:37,491 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 13:54:37,492 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:37,492 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 8
+2024-05-08 13:54:37,492 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:37,492 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-05-08 13:54:37,492 INFO    SenderThread:4080232 [job_builder.py:build():432] Attempting to build job artifact
+2024-05-08 13:54:37,493 INFO    SenderThread:4080232 [job_builder.py:_get_source_type():576] no source found
+2024-05-08 13:54:37,493 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 9
+2024-05-08 13:54:37,493 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:37,494 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 9
+2024-05-08 13:54:37,494 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:37,494 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-05-08 13:54:37,494 INFO    SenderThread:4080232 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-08 13:54:37,879 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 13:54:38,108 INFO    Thread-12 :4080232 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log
+2024-05-08 13:54:38,108 INFO    SenderThread:4080232 [dir_watcher.py:finish():388] scan: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files
+2024-05-08 13:54:38,109 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/config.yaml config.yaml
+2024-05-08 13:54:38,109 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/conda-environment.yaml conda-environment.yaml
+2024-05-08 13:54:38,109 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-metadata.json wandb-metadata.json
+2024-05-08 13:54:38,110 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/requirements.txt requirements.txt
+2024-05-08 13:54:38,113 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log output.log
+2024-05-08 13:54:38,116 INFO    SenderThread:4080232 [dir_watcher.py:finish():402] scan save: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-summary.json wandb-summary.json
+2024-05-08 13:54:38,116 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 10
+2024-05-08 13:54:38,118 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 13:54:38,118 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:38,121 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 10
+2024-05-08 13:54:38,121 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:38,121 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-05-08 13:54:38,122 INFO    SenderThread:4080232 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-08 13:54:38,269 INFO    wandb-upload_0:4080232 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/config.yaml
+2024-05-08 13:54:38,349 INFO    wandb-upload_2:4080232 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/requirements.txt
+2024-05-08 13:54:38,351 INFO    wandb-upload_4:4080232 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/wandb-summary.json
+2024-05-08 13:54:38,352 INFO    wandb-upload_1:4080232 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/conda-environment.yaml
+2024-05-08 13:54:38,353 INFO    wandb-upload_3:4080232 [upload_job.py:push():130] Uploaded file /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/files/output.log
+2024-05-08 13:54:38,553 INFO    Thread-11 (_thread_body):4080232 [sender.py:transition_state():613] send defer: 11
+2024-05-08 13:54:38,554 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:38,554 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 11
+2024-05-08 13:54:38,554 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:38,554 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-05-08 13:54:38,554 INFO    SenderThread:4080232 [file_pusher.py:join():175] waiting for file pusher
+2024-05-08 13:54:38,555 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 12
+2024-05-08 13:54:38,555 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:38,555 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 12
+2024-05-08 13:54:38,555 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:38,555 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-05-08 13:54:38,555 INFO    SenderThread:4080232 [file_stream.py:finish():601] file stream finish called
+2024-05-08 13:54:38,619 INFO    SenderThread:4080232 [file_stream.py:finish():605] file stream finish is done
+2024-05-08 13:54:38,619 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 13
+2024-05-08 13:54:38,619 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:38,619 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 13
+2024-05-08 13:54:38,619 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:38,619 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-05-08 13:54:38,619 INFO    SenderThread:4080232 [sender.py:transition_state():613] send defer: 14
+2024-05-08 13:54:38,620 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: defer
+2024-05-08 13:54:38,620 DEBUG   SenderThread:4080232 [sender.py:send():378] send: final
+2024-05-08 13:54:38,620 INFO    HandlerThread:4080232 [handler.py:handle_request_defer():184] handle defer: 14
+2024-05-08 13:54:38,620 DEBUG   SenderThread:4080232 [sender.py:send():378] send: footer
+2024-05-08 13:54:38,620 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: defer
+2024-05-08 13:54:38,620 INFO    SenderThread:4080232 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-05-08 13:54:38,621 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 13:54:38,621 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 13:54:38,622 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-08 13:54:38,622 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: poll_exit
+2024-05-08 13:54:38,622 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: server_info
+2024-05-08 13:54:38,622 DEBUG   SenderThread:4080232 [sender.py:send_request():405] send_request: server_info
+2024-05-08 13:54:38,624 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: get_summary
+2024-05-08 13:54:38,624 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: sampled_history
+2024-05-08 13:54:38,625 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: internal_messages
+2024-05-08 13:54:38,657 INFO    MainThread:4080232 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-05-08 13:54:38,658 INFO    MainThread:4080232 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-05-08 13:54:38,658 INFO    MainThread:4080232 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-05-08 13:54:38,658 DEBUG   HandlerThread:4080232 [handler.py:handle_request():158] handle_request: shutdown
+2024-05-08 13:54:38,658 INFO    HandlerThread:4080232 [handler.py:finish():882] shutting down handler
+2024-05-08 13:54:39,623 INFO    WriterThread:4080232 [datastore.py:close():296] close: /nfs/lambda_stor_01/data/avasan/LLM_Chemistry/ChemBerta/t5-chem/wandb/run-20240508_135426-bycxpl4i/run-bycxpl4i.wandb
+2024-05-08 13:54:39,657 INFO    SenderThread:4080232 [sender.py:finish():1545] shutting down sender
+2024-05-08 13:54:39,658 INFO    SenderThread:4080232 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-08 13:54:39,658 INFO    SenderThread:4080232 [file_pusher.py:join():175] waiting for file pusher

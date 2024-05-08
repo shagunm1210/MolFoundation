@@ -1,0 +1,68 @@
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/ibm/MoLFormer-XL-both-10pct:
+- configuration_molformer.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/ibm/MoLFormer-XL-both-10pct:
+- modeling_molformer.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 187M/187M [00:00<00:00, 274MB/s]
+tokenization_molformer.py: 100%|██████████████████████████████████████████████████████████████████████████████████████| 9.48k/9.48k [00:00<00:00, 41.3MB/s]
+A new version of the following files was downloaded from https://huggingface.co/ibm/MoLFormer-XL-both-10pct:
+- tokenization_molformer.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/ibm/MoLFormer-XL-both-10pct:
+- tokenization_molformer_fast.py
+- tokenization_molformer.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+embeddings MolformerEmbeddings(
+  (word_embeddings): Embedding(2362, 768, padding_idx=2)
+  (dropout): Dropout(p=0.2, inplace=False)
+)
+encoder MolformerEncoder(
+  (layer): ModuleList(
+    (0-11): 12 x MolformerLayer(
+      (attention): MolformerAttention(
+        (self): MolformerSelfAttention(
+          (query): Linear(in_features=768, out_features=768, bias=True)
+          (key): Linear(in_features=768, out_features=768, bias=True)
+          (value): Linear(in_features=768, out_features=768, bias=True)
+          (rotary_embeddings): MolformerRotaryEmbedding()
+          (feature_map): MolformerFeatureMap(
+            (kernel): ReLU()
+          )
+        )
+        (output): MolformerSelfOutput(
+          (dense): Linear(in_features=768, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (intermediate): MolformerIntermediate(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (intermediate_act_fn): GELUActivation()
+      )
+      (output): MolformerOutput(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+)
+LayerNorm LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+Epoch 0
+/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFormer/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFormer/t5-chem/run_script.py", line 179, in <module>
+    train_one_epoch(epoch)
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFormer/t5-chem/run_script.py", line 82, in train_one_epoch
+    outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels, output_hidden_states=True)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/homes/avasan/miniforge3_new/envs/sst_llama/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: MolformerModel.forward() got an unexpected keyword argument 'labels'

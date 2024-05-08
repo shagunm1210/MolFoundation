@@ -1,0 +1,28 @@
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/home/stanlo229/anaconda3/envs/MolFoundation/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/stanlo229/Research/Repos/MolFoundation/t5-chem/data_utils.py:28: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "y_regression_values": torch.tensor(self.y_regression_values[idx]).to(self.device),
+Epoch 0
+num_of_examples 1 loss: 0.0001735839620232582 %_data_trained : 0.0
+num_of_examples 401 loss: 0.0034926259331405163 %_data_trained : 5.0
+num_of_examples 801 loss: 0.0026707274187356233 %_data_trained : 10.0
+num_of_examples 1201 loss: 0.0018819651706144214 %_data_trained : 15.0
+num_of_examples 1601 loss: 0.0012953815958462655 %_data_trained : 20.0
+num_of_examples 2001 loss: 0.0009133685729466378 %_data_trained : 25.0
+num_of_examples 2401 loss: 0.0006653201521839946 %_data_trained : 30.0
+num_of_examples 2801 loss: 0.0005644224293064326 %_data_trained : 35.0
+num_of_examples 3201 loss: 0.00047145572723820804 %_data_trained : 40.0
+num_of_examples 3601 loss: 0.00037170596304349603 %_data_trained : 45.0
+num_of_examples 4001 loss: 0.0002980105340247974 %_data_trained : 50.0
+num_of_examples 4401 loss: 0.00024716282379813495 %_data_trained : 55.00000000000001
+Traceback (most recent call last):
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 167, in <module>
+    train_one_epoch(epoch)
+  File "/home/stanlo229/Research/Repos/MolFoundation/t5-chem/run_script.py", line 88, in train_one_epoch
+    total_loss += nn_loss.item()
+                  ^^^^^^^^^^^^^^
+KeyboardInterrupt
+num_of_examples 4801 loss: 0.0001951644418295473 %_data_trained : 60.0
