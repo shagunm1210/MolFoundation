@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 import sklearn.model_selection
 import torch
-import wandb
+# import wandb
 import pdb
 from regression_layer import NNModel
 from data_utils import CustomDataset
@@ -13,7 +13,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 
-wandb.init()
+# wandb.init()
 
 tokenizer = AutoTokenizer.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
 LLModel = AutoModelForSeq2SeqLM.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
@@ -23,11 +23,14 @@ nnmodel = NNModel(config={"input_size": 768, "embedding_size": 512, "hidden_size
 
 EPOCHS = 1
 
-wandb.watch(nnmodel, log_freq=100)
+# wandb.watch(nnmodel, log_freq=100)
 
 # import data (local import, change path to your data)
 data_path: Path = Path("../../../Datasets/qm9/gdb9_sample_10k.csv")
 data = pd.read_csv(data_path)
+
+# results path
+results_path = Path("../../results")
 
 # split data
 X_train, X_test = sklearn.model_selection.train_test_split(data["SMILES"], test_size=0.2, random_state=42)
@@ -92,7 +95,7 @@ def train_one_epoch(epoch_index):
         if num_of_examples % 100 == 0:
             last_loss = running_loss / 100 # loss per X examples
             print('num_of_examples {} loss: {} %_data_trained : {}'.format(num_of_examples, last_loss, num_of_examples / len(X_train) * 100))
-            wandb.log({"num_of_examples": num_of_examples, "train_loss": last_loss})
+            # wandb.log({"num_of_examples": num_of_examples, "train_loss": last_loss})
             running_loss = 0.
         num_of_examples += len(batch["input_ids"])
         # break
@@ -132,7 +135,7 @@ def inference_test_set(epoch_index):
             # if num_of_examples % 100 == 0:
             #     last_tloss = running_tloss / 100 # loss per X examples
             #     print('  num_of_examples {} test_loss: {}'.format(num_of_examples + 1, last_tloss))
-            wandb.log({"num_of_test_examples": num_of_examples, "test_loss": total_tloss})
+            # wandb.log({"num_of_test_examples": num_of_examples, "test_loss": total_tloss})
                 # running_tloss = 0.
                 # # Track best performance, and save the model's state
                 # if last_tloss < best_vloss:
@@ -146,7 +149,7 @@ def inference_test_set(epoch_index):
 
 def generate_parity_plot(ground_truth, predictions):
     ground_truth = np.array(ground_truth)
-    plt.scatter(ground_truth, predictions)
+    plt.scatter(ground_truth, predictions, s=4)
     # draw line of best fit
     m, b = np.polyfit(ground_truth, predictions, 1)
     line_of_best_fit = m*ground_truth + b
@@ -160,7 +163,7 @@ def generate_parity_plot(ground_truth, predictions):
     plt.xlabel("Ground Truth")
     plt.ylabel("Predictions")
     plt.title("Ground Truth vs Predictions")
-    plt.savefig("zpve_parity_plot.png")
+    plt.savefig(results_path / "t5-chem-10K_parity_plot.png")
 
 
 # Train for 1 epoch
