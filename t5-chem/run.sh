@@ -14,3 +14,4 @@ source /opt/python/3.8a/bin/activate
 conda activate MolFoundation
 
 # run code here
+python3 run_script.py
