@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 import sklearn.model_selection
 import torch
-import wandb
+#import wandb
 import pdb
 from regression_layer import NNModel
 from data_utils import CustomDataset
@@ -13,7 +13,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 
-wandb.init()
+#wandb.init()
 
 tokenizer = AutoTokenizer.from_pretrained("seyonec/ChemBERTa-zinc-base-v1")
 LLModel = AutoModelForMaskedLM.from_pretrained("seyonec/ChemBERTa-zinc-base-v1")
@@ -26,12 +26,13 @@ nnmodel = NNModel(config={"input_size": 768, "embedding_size": 512, "hidden_size
 
 EPOCHS = 1
 
-wandb.watch(nnmodel, log_freq=100)
+#wandb.watch(nnmodel, log_freq=100)
 
 # import data (local import, change path to your data)
-data_pwd = '/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation_test/t5-chem/MolFoundation/Data'
-data_path: Path = Path(f"{data_pwd}/gdb9_sample_10k.csv")
-data = pd.read_csv(data_path)
+#data_pwd = '/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFoundation_test/t5-chem/MolFoundation/Data'
+#data_path: Path = Path(f"{data_pwd}/gdb9_sample_10k.csv")
+#data = pd.read_csv(data_path)
+data = pd.read_csv('gdb9_sample_10k_zpve.csv')
 
 # split data
 X_train, X_test = sklearn.model_selection.train_test_split(data["SMILES"], test_size=0.2, random_state=42)
@@ -97,7 +98,7 @@ def train_one_epoch(epoch_index):
         if num_of_examples % 100 == 0:
             last_loss = running_loss / 100 # loss per X examples
             print('num_of_examples {} loss: {} %_data_trained : {}'.format(num_of_examples + 1, last_loss, num_of_examples / len(X_train) * 100))
-            wandb.log({"num_of_examples": num_of_examples, "train_loss": last_loss})
+            #wandb.log({"num_of_examples": num_of_examples, "train_loss": last_loss})
             running_loss = 0.
         num_of_examples += len(batch["input_ids"])
             
@@ -116,11 +117,11 @@ def inference_test_set(epoch_index):
         y_regression_values = batch["y_regression_values"]
 
         with torch.no_grad():
-            outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+            outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels, output_hidden_states=True)
             print(outputs)
             loss = outputs["loss"]
             logits = outputs["logits"]
-            encoder = outputs["encoder_last_hidden_state"]
+            encoder = outputs['hidden_states'][-1]#outputs["encoder_last_hidden_state"]
 
             # inference regression head on top of encoder output to label
             # average over second dimension of encoder output to get a single vector for each example
@@ -132,24 +133,26 @@ def inference_test_set(epoch_index):
             # add to dictionary
             outputs_dict["ground_truth"].extend(y_regression_values.cpu().numpy())
             outputs_dict["predictions"].extend(nn_outputs.flatten().cpu().detach().numpy())
-            total_loss += nn_loss.item()
-            nn_loss.backward()
-            optimizer.step()
+            total_tloss += nn_loss.item()
+            #nn_loss.backward()
+            #optimizer.step()
             running_tloss += nn_loss.item()
             if num_of_examples % 100 == 0:
                 last_tloss = running_tloss / 100 # loss per X examples
                 print('  num_of_examples {} test_loss: {}'.format(num_of_examples + 1, last_tloss))
-                wandb.log({"num_of_test_examples": num_of_examples, "test_loss": last_tloss})
+                #wandb.log({"num_of_test_examples": num_of_examples, "test_loss": last_tloss})
                 running_tloss = 0.
                 # Track best performance, and save the model's state
-                if last_tloss < best_vloss:
-                    best_vloss = last_tloss
-                    model_path = 'model_{}_{}'.format(timestamp, num_of_examples)
-                    torch.save(nnmodel.state_dict(), model_path)
+            #    if last_tloss < best_vloss:
+             #       best_vloss = last_tloss
+              #      model_path = 'model_{}_{}'.format(timestamp, num_of_examples)
+              #      torch.save(nnmodel.state_dict(), model_path)
         num_of_examples += len(batch["input_ids"])
     return outputs_dict
 
 def generate_parity_plot(ground_truth, predictions):
+    ground_truth = np.array(ground_truth)
+    predictions = np.array(predictions)
     plt.scatter(ground_truth, predictions)
     # draw line of best fit
     m, b = np.polyfit(ground_truth, predictions, 1)
