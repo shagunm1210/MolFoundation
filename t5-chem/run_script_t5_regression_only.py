@@ -6,7 +6,7 @@ import sklearn.model_selection
 import torch
 # import wandb
 import pdb
-from models import NNModel, t5chem_for_regression
+from models import NNModel
 from data_utils import CustomDataset
 import torch.nn.functional as F
 from datetime import datetime
@@ -15,14 +15,13 @@ import numpy as np
 
 # wandb.init()
 
-tokenizer = AutoTokenizer.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
-LLModel = AutoModelForSeq2SeqLM.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
+# t5-small, t5-base, t5-large, t5-3b, t5-11b
+tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
+LLModel = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
 LLModel.to("cuda")
 
-nnmodel = NNModel(config={"input_size": 768, "embedding_size": 512, "hidden_size": 256, "output_size": 1, "n_layers": 2}).to("cuda")
+nnmodel = NNModel(config={"input_size": 512, "embedding_size": 512, "hidden_size": 256, "output_size": 1, "n_layers": 2}).to("cuda")
 
-# finetune model
-FTModel = t5chem_for_regression(LLModel, nnmodel)
 EPOCHS = 1
 
 # wandb.watch(nnmodel, log_freq=100)
@@ -73,16 +72,27 @@ def train_one_epoch(epoch_index):
         labels = batch["labels"]
         y_regression_values = batch["y_regression_values"]
 
+        with torch.no_grad():
+            outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+            loss = outputs["loss"]
+            logits = outputs["logits"]
+            encoder = outputs["encoder_last_hidden_state"]
+
+        # train regression head on top of encoder output to label
         # Zero your gradients for every batch!
         optimizer.zero_grad()
-        ft_output = FTModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
 
+        # average over second dimension of encoder output to get a single vector for each example
+        encoder = encoder.mean(dim=1)
+
+        # pass encoder output to regression head
+        nn_outputs = nnmodel(encoder)
         # calculate loss from outputs and ground_truth_y_values
-        ft_loss = F.mse_loss(ft_output.flatten(), y_regression_values)
-        total_loss += ft_loss.item()
-        ft_loss.backward()
+        nn_loss = F.mse_loss(nn_outputs.flatten(), y_regression_values)
+        total_loss += nn_loss.item()
+        nn_loss.backward()
         optimizer.step()
-        running_loss += ft_loss.item()
+        running_loss += nn_loss.item()
         if num_of_examples % 100 == 0:
             last_loss = running_loss / 100 # loss per X examples
             print('num_of_examples {} loss: {} %_data_trained : {}'.format(num_of_examples, last_loss, num_of_examples / len(X_train) * 100))
@@ -106,13 +116,23 @@ def inference_test_set(epoch_index):
         y_regression_values = batch["y_regression_values"]
 
         with torch.no_grad():
-            ft_output = FTModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-            ft_loss = F.mse_loss(ft_output.flatten(), y_regression_values)
+            outputs = LLModel(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+            # loss = outputs["loss"]
+            # logits = outputs["logits"]
+            encoder = outputs["encoder_last_hidden_state"]
+
+            # inference regression head on top of encoder output to label
+            # average over second dimension of encoder output to get a single vector for each example (batch_size, seq_len, hidden_size)
+            encoder = encoder.mean(dim=1)
+
+            # pass encoder output to regression head
+            nn_outputs = nnmodel(encoder)
+            nn_loss = F.mse_loss(nn_outputs.flatten(), y_regression_values)
             # add to dictionary
             outputs_dict["ground_truth"].extend(y_regression_values.cpu().numpy())
-            outputs_dict["predictions"].extend(ft_output.flatten().cpu().detach().numpy())
-            total_tloss += ft_loss.item()
-            running_tloss += ft_loss.item()
+            outputs_dict["predictions"].extend(nn_outputs.flatten().cpu().detach().numpy())
+            total_tloss += nn_loss.item()
+            running_tloss += nn_loss.item()
             # if num_of_examples % 100 == 0:
             #     last_tloss = running_tloss / 100 # loss per X examples
             #     print('  num_of_examples {} test_loss: {}'.format(num_of_examples + 1, last_tloss))
@@ -143,7 +163,7 @@ def generate_parity_plot(ground_truth, predictions):
     plt.xlabel("Ground Truth")
     plt.ylabel("Predictions")
     plt.title("Ground Truth vs Predictions")
-    plt.savefig(results_path / "t5-chem-10K_parity_plot.png")
+    plt.savefig(results_path / "t5-small-10K_parity_plot.png")
 
 
 # Train for 1 epoch

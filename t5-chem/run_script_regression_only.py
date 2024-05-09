@@ -14,9 +14,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # wandb.init()
-
-tokenizer = AutoTokenizer.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
-LLModel = AutoModelForSeq2SeqLM.from_pretrained("GT4SD/multitask-text-and-chemistry-t5-base-augm")
+# multitask-text-and-chemistry-t5-base-augm, multitask-text-and-chemistry-t5-base-standard
+huggingface_model: str = "multitask-text-and-chemistry-t5-base-augm"
+tokenizer = AutoTokenizer.from_pretrained(f"GT4SD/{huggingface_model}")
+LLModel = AutoModelForSeq2SeqLM.from_pretrained(f"GT4SD/{huggingface_model}")
 LLModel.to("cuda")
 
 nnmodel = NNModel(config={"input_size": 768, "embedding_size": 512, "hidden_size": 256, "output_size": 1, "n_layers": 2}).to("cuda")
@@ -152,7 +153,6 @@ def generate_parity_plot(ground_truth, predictions):
     plt.scatter(ground_truth, predictions, s=4)
     # draw line of best fit
     m, b = np.polyfit(ground_truth, predictions, 1)
-    line_of_best_fit = m*ground_truth + b
     plt.plot(ground_truth, m*ground_truth + b, color="orange")
     # add labels of correlation coefficient
     # correlation coefficient
@@ -163,7 +163,7 @@ def generate_parity_plot(ground_truth, predictions):
     plt.xlabel("Ground Truth")
     plt.ylabel("Predictions")
     plt.title("Ground Truth vs Predictions")
-    plt.savefig(results_path / "t5-chem-10K_parity_plot.png")
+    plt.savefig(results_path / f"{huggingface_model}-10K_parity_plot.png")
 
 
 # Train for 1 epoch
