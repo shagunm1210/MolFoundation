@@ -6,7 +6,7 @@ import sklearn.model_selection
 import torch
 # import wandb
 import pdb
-from regression_layer import NNModel
+from models import NNModel
 from data_utils import CustomDataset
 import torch.nn.functional as F
 from datetime import datetime
@@ -30,7 +30,7 @@ data_path: Path = Path("../../../Datasets/qm9/gdb9_sample_10k.csv")
 data = pd.read_csv(data_path)
 
 # results path
-results_path = Path("../../results")
+results_path = Path("../results")
 
 # split data
 X_train, X_test = sklearn.model_selection.train_test_split(data["SMILES"], test_size=0.2, random_state=42)

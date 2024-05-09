@@ -56,3 +56,17 @@ class NNModel(nn.Module):
             embeds: torch.tensor = layer(embeds)
         output: torch.tensor = self.output(embeds)
         return output
+    
+
+class t5chem_for_regression(nn.Module):
+    def __init__(self, model, nnmodel):
+        super(t5chem_for_regression, self).__init__()
+        self.model = model
+        self.nnmodel = nnmodel
+
+    def forward(self, input_ids, attention_mask, labels):
+        outputs = self.model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+        encoder = outputs["encoder_last_hidden_state"]
+        encoder = encoder.mean(dim=1)
+        nn_output = self.nnmodel(encoder)
+        return nn_output
