@@ -16,11 +16,12 @@ import numpy as np
 # wandb.init()
 
 # t5-small, t5-base, t5-large, t5-3b, t5-11b
-tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
-LLModel = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
+huggingface_model: str = "t5-large"
+tokenizer = AutoTokenizer.from_pretrained(f"google-t5/{huggingface_model}")
+LLModel = AutoModelForSeq2SeqLM.from_pretrained(f"google-t5/{huggingface_model}")
 LLModel.to("cuda")
 
-nnmodel = NNModel(config={"input_size": 512, "embedding_size": 512, "hidden_size": 256, "output_size": 1, "n_layers": 2}).to("cuda")
+nnmodel = NNModel(config={"input_size": 1024, "embedding_size": 512, "hidden_size": 256, "output_size": 1, "n_layers": 2}).to("cuda")
 
 EPOCHS = 1
 
@@ -163,7 +164,7 @@ def generate_parity_plot(ground_truth, predictions):
     plt.xlabel("Ground Truth")
     plt.ylabel("Predictions")
     plt.title("Ground Truth vs Predictions")
-    plt.savefig(results_path / "t5-small-10K_parity_plot.png")
+    plt.savefig(results_path / f"{huggingface_model}-10K_parity_plot.png")
 
 
 # Train for 1 epoch
