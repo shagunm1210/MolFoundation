@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/nfs/lambda_stor_01/data/avasan/LLM_Chemistry/MolFormer/t5-chem/run_script.py", line 21, in <module>
+    LLModel = AutoModel.from_pretrained("ibm/MoLFormer-XL-both-10pct", deterministic_eval=True, trust_remote_code=True)
+NameError: name 'AutoModel' is not defined
